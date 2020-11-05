@@ -182,7 +182,7 @@
         <!--Detail View Controller-->
         <scene sceneID="yy3-4E-5bA">
             <objects>
-                <viewController storyboardIdentifier="showDetail" modalPresentationStyle="fullScreen" id="YmJ-Pz-S30" customClass="DetailViewController" customModule="standardbankApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="showDetail" id="YmJ-Pz-S30" customClass="DetailViewController" customModule="standardbankApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oc8-gC-co1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

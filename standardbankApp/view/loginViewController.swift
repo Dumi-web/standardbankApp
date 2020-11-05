@@ -46,11 +46,11 @@ class loginViewController: UIViewController {
                 return
             }
             
-        // transition to tableview screen when user successfully signed in.
-        else {
-            self.transitionToTableViewScreen()
+            // transition to tableview screen when user successfully signed in.
+            else {
+                self.transitionToTableViewScreen()
+            }
         }
-    }
         // validate the fields
         let error = validateFields()
         if error != nil {

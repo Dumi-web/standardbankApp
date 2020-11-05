@@ -24,7 +24,7 @@ class TableViewController: UIViewController {
 
 
 extension TableViewController: UITableViewDelegate,UITableViewDataSource {
-    
+    // it is an array that displays a list of different authMethods on the table view screen
     func displayAuthMethods(){
         let fingerIDAuthenticationMethod  = viewModelApp(authName:"Using fingerprint")
         authNames.append(fingerIDAuthenticationMethod)

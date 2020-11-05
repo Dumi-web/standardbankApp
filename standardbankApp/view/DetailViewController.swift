@@ -11,7 +11,6 @@ class DetailViewController: UIViewController {
     
     @IBOutlet var authDetailView: UILabel!
     
-    @IBOutlet var navBar: UINavigationItem!
     var authMethod: viewModelApp?
     
     override func viewDidLoad() {
