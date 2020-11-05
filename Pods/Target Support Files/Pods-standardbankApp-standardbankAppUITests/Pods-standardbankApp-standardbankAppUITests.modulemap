@@ -1,0 +1,6 @@
+framework module Pods_standardbankApp_standardbankAppUITests {
+  umbrella header "Pods-standardbankApp-standardbankAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
