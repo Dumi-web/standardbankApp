@@ -42,43 +42,46 @@ class loginViewController: UIViewController {
         
         // check if user has signed in with the same email and password.
         Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
-            if error != nil {
-                return
+            if error == nil {
+                self.performSegue(withIdentifier: "tableVC", sender: sender)
             }
             
-            // transition to tableview screen when user successfully signed in.
-            else {
-                self.transitionToTableViewScreen()
+        // transition to tableview screen when user successfully signed in.
+        else {
+            let errors = self.validateFields()
+            if errors != nil {
+                self.showError(errors!)
             }
+            
         }
+    }
         // validate the fields
         let error = validateFields()
-        if error != nil {
-            // there was an error and show error message
-            showError(error!)
-        }
-        else {
+        if error == nil {
             let email = userName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passWord.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             // create user
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 // check for errors
-                if err != nil {
-                    // there is an error creating a user
-                    self.showError("Error creating user, either email or password is invalid.")
-                }
-                else{
+                if err == nil {
                     // save user data in cloud fire store
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["email": email, "password": password, "uid": result!.user.uid]) { (error) in
+                    db.collection("users").addDocument(data: ["email": email, "password": password, "uid": result?.user.uid as Any]) { (error) in
                         if error != nil {
                             self.showError("Error saving user data.")
+                        }else{
+                            // transition to the table view screen
+                            self.performSegue(withIdentifier: "tableVC", sender: sender)
                         }
                     }
-                    // transition to the table view screen
-                    self.transitionToTableViewScreen()
+
                 }
+                
             }
+        }else{
+            // there is an error creating a user
+            self.showError(error!)
+            self.showError("Error creating user, either email or password is invalid.")
         }
     }
     
@@ -86,12 +89,7 @@ class loginViewController: UIViewController {
         errorLabel.text = message
         errorLabel.alpha = 1
     }
-    
-    func transitionToTableViewScreen(){
-        let tableViewController = storyboard?.instantiateViewController(identifier: Constants.StoryBoard.authViewController) as? TableViewController
-        view.window?.rootViewController = tableViewController
-        view.window?.makeKeyAndVisible()
-    }
+    func
 }
 
 

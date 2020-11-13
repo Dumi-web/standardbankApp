@@ -10,7 +10,6 @@
 		7A5E54601D6D7349C73D1708 /* Pods_standardbankAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F89E1834F785D2959837767 /* Pods_standardbankAppTests.framework */; };
 		8EA87A776EEB1944DB5FC0A7 /* Pods_standardbankApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A16572839394F505B210FF /* Pods_standardbankApp.framework */; };
 		95143BB4CC8C0E995BE23632 /* Pods_standardbankApp_standardbankAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62C5FF94D5A46219AD733AD /* Pods_standardbankApp_standardbankAppUITests.framework */; };
-		D3159E9D2550832D0020BAAA /* viewModelSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3159E9C2550832D0020BAAA /* viewModelSignUp.swift */; };
 		D34D2147254AA247007BB977 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34D2146254AA247007BB977 /* TableViewController.swift */; };
 		D34D214C254AA31E007BB977 /* authModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34D214B254AA31E007BB977 /* authModel.swift */; };
 		D34D2151254AD1BD007BB977 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34D2150254AD1BD007BB977 /* DetailViewController.swift */; };
@@ -188,7 +187,6 @@
 		8F89E1834F785D2959837767 /* Pods_standardbankAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_standardbankAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A16572839394F505B210FF /* Pods_standardbankApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_standardbankApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0A5A67EE8BD290D1B69CA0 /* Pods-standardbankApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-standardbankApp.release.xcconfig"; path = "Target Support Files/Pods-standardbankApp/Pods-standardbankApp.release.xcconfig"; sourceTree = "<group>"; };
-		D3159E9C2550832D0020BAAA /* viewModelSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModelSignUp.swift; sourceTree = "<group>"; };
 		D34D2146254AA247007BB977 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D34D214B254AA31E007BB977 /* authModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authModel.swift; sourceTree = "<group>"; };
 		D34D2150254AD1BD007BB977 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -264,7 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				D34D2155254AE2D2007BB977 /* viewModelApp.swift */,
-				D3159E9C2550832D0020BAAA /* viewModelSignUp.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -753,7 +750,6 @@
 			files = (
 				D3A0C9AA254763D9002A34BA /* AppDelegate.swift in Sources */,
 				D34D2147254AA247007BB977 /* TableViewController.swift in Sources */,
-				D3159E9D2550832D0020BAAA /* viewModelSignUp.swift in Sources */,
 				D34D214C254AA31E007BB977 /* authModel.swift in Sources */,
 				D3A0C9AC254763D9002A34BA /* SceneDelegate.swift in Sources */,
 				D3A0C9E22548D308002A34BA /* loginViewController.swift in Sources */,

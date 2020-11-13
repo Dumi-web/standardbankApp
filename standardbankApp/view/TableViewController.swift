@@ -17,6 +17,7 @@ class TableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         displayAuthMethods()
+        self.navigationItem.hidesBackButton = true
         authTableView.dataSource = self
         authTableView.delegate = self
     }
